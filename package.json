@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/northcoders/BE-game-of-sql/issues"
   },
-  "homepage": "https://github.com/northcoders/BE-game-of-sql#readme"
+  "homepage": "https://github.com/northcoders/BE-game-of-sql#readme",
+  "dependencies": {
+    "pg-promise": "^8.4.4"
+  }
 }
