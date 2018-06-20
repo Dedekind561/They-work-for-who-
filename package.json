@@ -1,0 +1,20 @@
+{
+  "name": "gameSQL",
+  "version": "1.0.0",
+  "description": "Please listen to the Game of Thrones title music whilst reading this readme. For dramatic effect.",
+  "main": "MPSlice.js",
+  "scripts": {
+    "seed": "psql -f start.sql && node seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/northcoders/BE-game-of-sql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/northcoders/BE-game-of-sql/issues"
+  },
+  "homepage": "https://github.com/northcoders/BE-game-of-sql#readme"
+}
