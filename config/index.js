@@ -7,3 +7,4 @@ module.exports = {
     password: 'nc'
   }
 }
+// this is ubuntu config

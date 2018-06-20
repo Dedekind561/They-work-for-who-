@@ -3,11 +3,10 @@
 
 ## Task 1
 
-* In order to create an SQL database for the MPs.  We are going to store the constituencies, politicians and MPs in separate tables
+* In order to create an SQL database for the MPs.  We are going to store the constituencies, politicians and MPs in separate tables in our database.
 
-* The seed functionality has been written for you: however, the queries/index.js file needs to have data in a particular format:
+* Your first task is to write the logic for the function `formatData` - (in **format-data.js**) which takes an array of MPs.
 
-* Your first task is to write the logic for the function `formatData` - which takes an array of MPs
 * Your function should iterate through the MPs in order to build up an array of MPs, parties and constituencies (they can then be seeded into the db);
 
 * `parties` should be an array of objects in the following format:
