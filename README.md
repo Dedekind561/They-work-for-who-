@@ -40,6 +40,8 @@
 
 * You should take note that the politicians array that you are building up has instead of party names and constituency names, just integers.  These integers should correspond to the foreign keys when the politicians are inserted into the database.
 
+* Use the command `npm run seed` to execute the sql file and then run the seed file.
+
 ## Task 2
 
 
