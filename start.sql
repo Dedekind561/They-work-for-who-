@@ -1,21 +1,20 @@
 DROP DATABASE IF EXISTS mps;
 CREATE DATABASE mps;
-
 \c mps;
-
-CREATE TABLE parties (
+CREATE TABLE parties
+(
   party_id SERIAL PRIMARY KEY,
-  name VARCHAR(50)
+  party VARCHAR(50)
 );
-
-CREATE TABLE constituencies (
+CREATE TABLE constituencies
+(
   constituency_id SERIAL PRIMARY KEY,
-  name VARCHAR(50)
+  constituency VARCHAR(150)
 );
-
-CREATE TABLE politicians (
+CREATE TABLE politicians
+(
   politician_id SERIAL PRIMARY KEY,
-  name VARCHAR(50),
+  politician VARCHAR(50),
   party INT,
   constituency INT,
   FOREIGN KEY (party) REFERENCES parties(party_id),

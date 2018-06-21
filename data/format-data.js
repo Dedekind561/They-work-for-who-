@@ -8,29 +8,24 @@ const formatData = MPData => {
   };
 
   return MPData.reduce(
-    (
-      { parties, partyLookup, constituencyLookup, constituencies, MPs },
-      MP,
-      index
-    ) => {
+    ({ parties, partyLookup, constituencyLookup, constituencies, MPs }, MP) => {
       if (!partyLookup[MP.party]) {
-        parties.push({ name: MP.party });
+        parties.push({ party: MP.party });
         partyLookup[MP.party] = parties.length;
       }
+      constituencies.push({ constituency: MP.constituency });
+      constituencyLookup[MP.constituency] = constituencies.length;
 
-      return { parties, partyLookup };
-      // console.log(MP.party);
-      //check if party name is already in partyLookup
-      //if it is, dont push
-      // if not push party name to parties array, add part name to partyLookup
+      MPs.push({
+        politician: MP.name,
+        party: partyLookup[MP.party],
+        constituency: constituencyLookup[MP.constituency]
+      });
 
-      // parties = Array.from(new Set(parties));
-      // constituencies.push({ name: MP.constituency });
+      return { parties, partyLookup, constituencies, constituencyLookup, MPs };
     },
     initialAcc
   );
 };
-
-//parties, partyLookup, constituencyLookup, constituencies, MPs
 
 module.exports = formatData;

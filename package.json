@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/northcoders/BE-game-of-sql#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
     "pg-promise": "^8.4.4"
   }
 }

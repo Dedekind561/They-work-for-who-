@@ -1,9 +1,24 @@
 const generateQuery = require("./generate-query");
-const { parties, constituencies, MPs, partyLookup } = require("../data");
-console.log(partyLookup, "<<<<<<<<");
+const {
+  parties,
+  constituencies,
+  MPs,
+  partyLookup,
+  constituencyLookup
+} = require("../data");
+// console.log(partyLookup, "<<<<<<<<");
+// console.log(constituencies);
 
 module.exports = {
-  insertParties: generateQuery(["name"], { table: "parties" }, parties)
-  // insertMPs: generateQuery(['name', 'party', 'constituency'], { table: 'politicians' }, MPs),
-  // insertConstituencies: generateQuery(['name'], { table: 'constituencies' }, constituencies)
+  insertParties: generateQuery(["party"], { table: "parties" }, parties),
+  insertMPs: generateQuery(
+    ["politician", "party", "constituency"],
+    { table: "politicians" },
+    MPs
+  ),
+  insertConstituencies: generateQuery(
+    ["constituency"],
+    { table: "constituencies" },
+    constituencies
+  )
 };
