@@ -17,7 +17,7 @@ CREATE TABLE politicians
   politician VARCHAR(50),
   party INT,
   constituency INT,
-  FOREIGN KEY (party) REFERENCES parties(party_id),
+  FOREIGN KEY (party) REFERENCES parties(party_id) ON DELETE CASCADE,
   FOREIGN KEY (constituency) REFERENCES constituencies(constituency_id)
 ); 
 
