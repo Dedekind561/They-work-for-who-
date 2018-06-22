@@ -1,6 +1,6 @@
 const partyRouter = require("express").Router();
-const { getAllParties } = require("../controllers/parties");
+const { getAllParties, addNewParty } = require("../controllers/parties");
 
-partyRouter.route("/").get(getAllParties);
+partyRouter.route("/").get(getAllParties).post(addNewParty);
 
 module.exports = { partyRouter };

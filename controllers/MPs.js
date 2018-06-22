@@ -1,3 +1,8 @@
+/*
+  Controller file for MPs
+*/
+
+
 // const db = require("../db/index");
 const { fetchMPs, fetchMPByID } = require("../db/mps");
 

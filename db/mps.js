@@ -1,3 +1,7 @@
+/*
+  Model file for MPS
+*/
+
 const {db} = require('./index');
 
 const fetchMPs = (query) => {

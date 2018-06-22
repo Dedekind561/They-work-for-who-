@@ -1,3 +1,7 @@
+/*
+  Model file for constituencies
+*/
+
 const {db} = require('./index');
 
 const fetchConstituencies = () => {

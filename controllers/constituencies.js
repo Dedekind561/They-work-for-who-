@@ -1,3 +1,7 @@
+/*
+  Controller file for constituencies
+*/
+
 // const db = require("../db");
 const { fetchConstituencies } = require("../db/cons");
 
