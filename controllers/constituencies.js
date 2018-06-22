@@ -1,10 +1,10 @@
 // const db = require("../db");
-const { fetchConstituencies } = require("../db/index");
+const { fetchConstituencies } = require("../db/cons");
 
 const getAllConstituencies = (req, res) => {
-  fetchConstituencies((err, constituencies) => {
+  fetchConstituencies().then(constituencies => {
     res.status(200).send({ constituencies });
-  });
+  }).catch(console.log);
 };
 
 module.exports = { getAllConstituencies };
